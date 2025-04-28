@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TugasPakAji"
+rootProject.name = "TugasAPISportDB"
 include(":app")
  
