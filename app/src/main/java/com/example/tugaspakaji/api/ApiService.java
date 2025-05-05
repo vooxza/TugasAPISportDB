@@ -7,6 +7,16 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiService {
-    @GET("https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=English%20Premier%20League")
-    Call<TeamResponse> getAllTeams(@Query("l") String league);
+    // For endpoint like: /api/v1/json/3/search_all_teams.php?l=English%20Premier%20League
+    @GET("api/v1/json/3/search_all_teams.php")
+    Call<TeamResponse> getTeamsByLeague(
+            @Query("l") String leagueName
+    );
+
+    // For endpoint like: /api/v1/json/3/search_all_teams.php?s=Soccer&c=Spain
+    @GET("api/v1/json/3/search_all_teams.php")
+    Call<TeamResponse> getTeamsBySportAndCountry(
+            @Query("s") String sport,
+            @Query("c") String country
+    );
 }

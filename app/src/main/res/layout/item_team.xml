@@ -4,26 +4,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:layout_margin="8dp"
+    android:backgroundTint="@android:color/white"
+    android:elevation="4dp"
+    android:clipToOutline="true"
+    android:outlineProvider="background"    >
 
     <ImageView
         android:id="@+id/imgTeamBadge"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Team Badge"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Team Badge" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/tvTeamName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Team Name"
+        android:text="Item Name"
         android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"
+        android:paddingStart="12dp"
         app:layout_constraintStart_toEndOf="@id/imgTeamBadge"
         app:layout_constraintTop_toTopOf="@id/imgTeamBadge"
         app:layout_constraintBottom_toBottomOf="@id/imgTeamBadge"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingStart="8dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
